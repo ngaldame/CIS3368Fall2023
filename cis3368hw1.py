@@ -43,3 +43,21 @@ for row in data:
     print(row['seller'])
 
 name = input("\nEnter the seller's name:\n")
+
+#if-elif-else statement will print a specific statement and/or a total price depending on the inputted name
+if name == 'James':
+    print("\n-Product:", data[0]['product'], "Quantity:", data[0]['quantity'], "Price:", data[0]['price'])
+    print("\n-Product:", data[1]['product'], "Quantity:", data[1]['quantity'], "Price:", data[1]['price'])
+    total_one = data[0]['quantity'] * data[0]['price'] + data[1]['quantity'] * data[1]['price']
+    print(f'\nTotal Sales for {name}: ${total_one:.2f}')
+elif name == 'Jack':
+    print("\n-Product:", data[2]['product'], "Quantity:", data[2]['quantity'], "Price:", data[2]['price'])
+    print("\n-Product:", data[3]['product'], "Quantity:", data[3]['quantity'], "Price:", data[3]['price'])
+    total_two = data[2]['quantity'] * data[2]['price'] + data[3]['quantity'] * data[3]['price']
+    print(f'\nTotal Sales for {name}: ${total_two:.2f}')
+elif name == 'John':
+    print("\n-Product:", data[4]['product'], "Quantity:", data[4]['quantity'], "Price:", data[4]['price'])
+    total_three = data[4]['quantity'] * data[4]['price']
+    print(f'\nTotal Sales for {name}: ${total_three:.2f}')
+else:
+    print("\nThis person is not in our purchasing database")
